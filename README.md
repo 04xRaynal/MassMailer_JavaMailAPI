@@ -52,7 +52,7 @@ and change the 'mail.smtp.port' to any port of your choice.
 
 ---
 
-The MassMailer_Gmail Program is set up for the Google Mail (Gmail) Server,\ 
+The MassMailer_Gmail Program is set up for the Google Mail (Gmail) Server,\
 Can be Similarly set for other Email Providers.
 
 ---
