@@ -60,7 +60,7 @@ Can be Similarly set for other Email Providers.
 Resolving AuthenticationFailedException\
 (Google doesn't allow to send mails from unknown locations)
  
-Click on this link and click on turn on radio button to allow users to send mail from unknown location.\ 
+Click on this link and click on turn on radio button to allow users to send mail from unknown location.\
 [Google less Secure Apps](https://www.google.com/settings/security/lesssecureapps)
 
 ---
