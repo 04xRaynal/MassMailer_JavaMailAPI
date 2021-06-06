@@ -262,6 +262,7 @@ public class MassMailer_FakeSmtp {
 						multipart.addBodyPart(messageBodyPart_file);
 					}
 				}
+				message.setContent(multipart);
 				
 				String sendPref;
 				do {
@@ -279,7 +280,6 @@ public class MassMailer_FakeSmtp {
 						for(String recipientEmail: recipientEmails) {
 							message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipientEmail));
 												
-							message.setContent(multipart);
 							Transport.send(message);
 							sentCount++;
 						}
@@ -301,7 +301,6 @@ public class MassMailer_FakeSmtp {
 							message.addRecipients(Message.RecipientType.TO, InternetAddress.parse(sbEmailsList.toString()));
 						}
 						
-						message.setContent(multipart);
 						Transport.send(message);
 						sentCount++;
 						break;

@@ -275,6 +275,7 @@ public class MassMailer_Gmail {
 						multipart.addBodyPart(messageBodyPart_file);
 					}
 				}
+				message.setContent(multipart);
 				
 				String sendPref;
 				do {
@@ -292,7 +293,6 @@ public class MassMailer_Gmail {
 						for(String recipientEmail: recipientEmails) {
 							message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipientEmail));
 												
-							message.setContent(multipart);
 							Transport.send(message);
 							sentCount++;
 						}
@@ -314,7 +314,6 @@ public class MassMailer_Gmail {
 							message.addRecipients(Message.RecipientType.TO, InternetAddress.parse(sbEmailsList.toString()));
 						}
 						
-						message.setContent(multipart);
 						Transport.send(message);
 						sentCount++;
 						break;
